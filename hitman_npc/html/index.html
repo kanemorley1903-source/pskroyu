@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hitman Contracts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- on-screen tracker while a contract is running -->
+  <aside id="hud" class="hud" hidden>
+    <div class="hud-head"><span class="pulse"></span><span data-i18n="ui_hud_title">Contract</span></div>
+    <div class="hud-target" id="hud-target"></div>
+    <div class="hud-loc" id="hud-loc"></div>
+    <div class="hud-row">
+      <span data-i18n="ui_hud_time">Time left</span>
+      <strong id="hud-time">0:00</strong>
+    </div>
+    <div class="hud-status" id="hud-status"></div>
+    <ul class="chips hud-bonuses" id="hud-bonuses"></ul>
+  </aside>
+
+  <!-- the contract board -->
+  <div id="backdrop" class="backdrop" hidden>
+    <section id="board" class="board" role="dialog" aria-labelledby="board-title">
+      <header class="board-head">
+        <div>
+          <h1 id="board-title" data-i18n="ui_title">Contract Board</h1>
+          <p class="sub" data-i18n="ui_subtitle">No names. No questions. Cash on delivery.</p>
+        </div>
+        <button id="btn-close" class="icon-btn" type="button" aria-label="Close" title="Close (Esc)">&times;</button>
+      </header>
+
+      <div id="profile" class="profile"></div>
+
+      <div id="active" class="active" hidden></div>
+      <div id="offers" class="offers"></div>
+      <div id="cooldown" class="cooldown" hidden></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

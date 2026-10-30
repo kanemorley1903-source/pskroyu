@@ -1,0 +1,71 @@
+Locales = Locales or {}
+
+Locales.en = {
+    -- access / errors
+    err_not_ready     = 'The system is still starting up. Try again in a moment.',
+    err_no_char       = 'Your character is not loaded yet.',
+    err_job           = 'You are not connected enough to work for the broker.',
+    err_police        = 'Too quiet out there. At least %d police must be on duty.',
+    err_cooldown      = 'The broker has nothing for you right now. Come back in %s.',
+    err_active        = 'You already have an active contract.',
+    err_no_active     = 'You have no active contract.',
+    err_offer_gone    = 'That contract is no longer available.',
+    err_too_far       = 'You need to be next to the broker.',
+    err_locked        = 'You have not earned the reputation for that contract.',
+
+    -- contract lifecycle
+    contract_accepted = 'Contract accepted: eliminate %s. Check your map.',
+    contract_complete = 'Contract complete. You earned %s.',
+    contract_bonus    = '%s bonus: +%d%%',
+    contract_cancelled = 'You walked away from the contract. (-%d reputation)',
+    contract_failed   = 'Contract failed. (-%d reputation)',
+    contract_expired  = 'Time is up and the target is in the wind. (-%d reputation)',
+    contract_stolen   = 'Somebody else got to the target first. The contract is void.',
+    contract_lost     = 'The target slipped away. The contract is void.',
+    contract_invalid  = 'Something went wrong with this contract. It was voided.',
+    level_up          = 'Your reputation grows. You are now a %s.',
+
+    -- bonus names
+    bonus_headshot    = 'Headshot',
+    bonus_silent      = 'Silent kill',
+    bonus_fast        = 'Quick work',
+
+    -- client prompts / blips
+    prompt_broker     = 'Press ~INPUT_PICKUP~ to talk to the broker',
+    blip_broker       = 'Contract Broker',
+    blip_target       = 'Target',
+    blip_area         = 'Last Known Area',
+    target_here       = 'This is the area. Find %s.',
+    target_spotted    = 'You have eyes on the target.',
+    coords_copied     = 'Position: %s',
+
+    -- NUI
+    ui_title          = 'Contract Board',
+    ui_subtitle       = 'No names. No questions. Cash on delivery.',
+    ui_level          = 'Standing',
+    ui_reputation     = 'Reputation',
+    ui_max_level      = 'Top of the food chain',
+    ui_next_level     = 'Next: %s at %d rep',
+    ui_kills          = 'Kills',
+    ui_earned         = 'Earned',
+    ui_failed         = 'Failed',
+    ui_location       = 'Last seen',
+    ui_time           = 'Time limit',
+    ui_guards         = 'Guards',
+    ui_guard_one      = '1 guard',
+    ui_guards_n       = '%d guards',
+    ui_no_guards      = 'Alone',
+    ui_bonuses        = 'Bonus objectives',
+    ui_no_bonuses     = 'None',
+    ui_accept         = 'Accept contract',
+    ui_abandon        = 'Abandon contract',
+    ui_active_title   = 'Active contract',
+    ui_active_hint    = 'Find the target and finish the job. Abandoning costs reputation.',
+    ui_no_offers      = 'No contracts right now. Check back soon.',
+    ui_cooldown       = 'Next contract available in',
+    ui_hud_title      = 'Contract',
+    ui_hud_time       = 'Time left',
+    ui_hud_travel     = 'Head to the marked area',
+    ui_hud_engage     = 'Target in sight range - eliminate',
+    ui_hud_done       = 'Confirming kill...',
+}

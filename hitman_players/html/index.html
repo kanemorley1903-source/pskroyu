@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Darknet Contracts</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- on-screen tracker for the hitman while a contract is running -->
+  <aside id="hud" class="hud" hidden>
+    <div class="hud-head"><span class="pulse"></span><span data-i18n="ui_hud_title">Contract</span></div>
+    <div class="hud-target" id="hud-target"></div>
+    <div class="hud-desc" id="hud-desc"></div>
+    <div class="hud-row">
+      <span data-i18n="ui_hud_time">Time left</span>
+      <strong id="hud-time">0:00</strong>
+    </div>
+    <div class="hud-row">
+      <span data-i18n="ui_hud_signal">Signal</span>
+      <strong id="hud-signal" data-signal="waiting"></strong>
+    </div>
+  </aside>
+
+  <div id="backdrop" class="backdrop" hidden>
+    <section id="app" class="board" role="dialog" aria-labelledby="app-title">
+      <header class="board-head">
+        <div>
+          <h1 id="app-title" data-i18n="ui_title">Darknet Contracts</h1>
+          <p class="sub" data-i18n="ui_subtitle">Everyone has a price.</p>
+        </div>
+        <div class="head-actions">
+          <button id="btn-refresh" class="icon-btn" type="button" aria-label="Refresh" title="Refresh">&#8635;</button>
+          <button id="btn-close" class="icon-btn" type="button" aria-label="Close" title="Close (Esc)">&times;</button>
+        </div>
+      </header>
+
+      <div id="strip" class="strip"></div>
+
+      <nav id="tabs" class="tabs" role="tablist">
+        <button type="button" role="tab" data-tab="board"  data-i18n="ui_tab_board">Board</button>
+        <button type="button" role="tab" data-tab="active" data-i18n="ui_tab_active">Active</button>
+        <button type="button" role="tab" data-tab="place"  data-i18n="ui_tab_place">Post a contract</button>
+        <button type="button" role="tab" data-tab="mine"   data-i18n="ui_tab_mine">My contracts</button>
+      </nav>
+
+      <main id="panel" class="panel"></main>
+      <div id="toast" class="toast" role="status" hidden></div>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
